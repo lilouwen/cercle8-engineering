@@ -1,0 +1,53 @@
+:root {
+  --c8-glow: #6366f1;
+  --c8-cyan: #38bdf8;
+}
+[data-md-color-scheme="slate"] {
+  --md-default-bg-color: #0f1224;
+  --md-primary-fg-color: #211e49;
+  --md-accent-fg-color: #38bdf8;
+  --md-typeset-a-color: #93c5fd;
+  --md-code-bg-color: #191c33;
+}
+.md-header, .md-tabs {
+  background: linear-gradient(108deg, #0f0c29 0%, #302b63 57%, #24243e 100%);
+}
+.hero-kicker {
+  color: var(--c8-cyan);
+  font-weight: 750;
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  margin-top: 0.8rem;
+}
+.md-content__inner > h1:first-of-type {
+  font-size: clamp(2.5rem, 5vw, 4.1rem);
+  line-height: 1.12;
+  font-weight: 800;
+  margin-bottom: 0.15rem;
+}
+.md-content__inner > h2:first-of-type {
+  font-size: clamp(1.1rem, 2.1vw, 1.6rem);
+  font-weight: 550;
+  margin-top: 0.25rem;
+}
+.md-typeset h2 {
+  border-bottom: 1px solid rgba(99,102,241,0.22);
+  padding-bottom: 0.35rem;
+}
+.md-typeset .grid.cards > ul > li {
+  border: 1px solid rgba(99,102,241,0.25);
+  border-radius: 0.65rem;
+}
+.md-typeset .md-button--primary {
+  background: #4f46e5;
+  border-color: #4f46e5;
+  color: #fff;
+}
+.md-typeset .md-button--primary:hover {
+  background: #6366f1;
+  border-color: #6366f1;
+}
+.md-typeset table:not([class]) {
+  border-radius: 0.5rem;
+  overflow: hidden;
+}

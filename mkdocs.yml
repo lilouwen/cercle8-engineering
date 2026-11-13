@@ -1,0 +1,91 @@
+site_name: "Cercle 8 | Engineering"
+site_description: "Solo engineering: SaaS architecture, multi-tenancy, integrations and technical trade-offs"
+site_author: "Owen-Junior Jean"
+site_url: https://lilouwen.github.io/cercle8-engineering/
+repo_url: https://github.com/lilouwen/cercle8-engineering
+repo_name: lilouwen/cercle8-engineering
+docs_dir: .site-docs
+site_dir: site
+
+theme:
+  name: material
+  language: en
+  icon:
+    repo: fontawesome/brands/github
+  palette:
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: deep purple
+      accent: cyan
+      toggle:
+        icon: material/weather-sunny
+        name: Light theme
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: deep purple
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: Dark theme
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.indexes
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
+extra_css:
+  - stylesheets/extra.css
+
+nav:
+  - Home: index.md
+  - Engineering:
+      - Engineering challenges: docs/engineering-challenges.md
+      - Solo development: docs/solo-development.md
+      - Lessons learned: docs/lessons-learned.md
+      - Evidence & validation: docs/validation-status.md
+  - Architecture:
+      - System overview: docs/system-architecture.md
+      - Multi-tenancy: docs/multi-tenancy.md
+      - Security & privacy: docs/security-and-privacy.md
+      - Diagrams index: architecture/README.md
+      - System context: architecture/system-overview.md
+      - Shopify identity: architecture/shopify-tenant-flow.md
+      - Ingestion flow: architecture/ingestion-flow.md
+      - Recommendation flow: architecture/recommendation-flow.md
+  - Integrations:
+      - Shopify: docs/shopify-integration.md
+      - Diagnostic engine: docs/diagnostic-engine.md
+      - Klaviyo execution: docs/klaviyo-execution.md
+  - Decisions:
+      - Decision index: engineering-decisions/README.md
+      - "ADR 0001 - Supabase": engineering-decisions/0001-supabase-source-of-truth.md
+      - "ADR 0002 - Shopify sessions": engineering-decisions/0002-shopify-sessions.md
+      - "ADR 0003 - Approval": engineering-decisions/0003-human-approved-execution.md
+      - "ADR 0004 - Privacy": engineering-decisions/0004-scoped-shopify-privacy.md
+  - Evolution:
+      - Development journal: development-journal/README.md
+      - "June 2026 - Ingestion": development-journal/2026-06-data-and-tenant-tests.md
+      - "October 2026 - Consolidation": development-journal/2026-10-shopify-convergence.md
+  - Reference:
+      - Documentation index: docs/README.md
+      - Repository README: README.md
+      - Publishing: docs/publishing.md
+      - Security policy: SECURITY.md
+      - Contributions: CONTRIBUTING.md
+      - Assets policy: assets/README.md
