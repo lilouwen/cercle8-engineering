@@ -93,6 +93,14 @@ These are **historical development records**, not current production metrics.
 
 See [Evidence & validation ledger](docs/validation-status.md) and [Development journal](development-journal/README.md). Tests and dates here reflect development notes, not independently reproduced evidence.
 
+## Engineering website
+
+The case study includes a **searchable engineering documentation website** with a technical timeline, architecture diagrams and detailed engineering decisions.
+
+**Publication boundary:** The website must be deployed through GitHub Pages before it can be described as publicly live.
+
+[Website publication instructions](docs/publishing.md) · [Site build workflow](.github/workflows/engineering-site.yml)
+
 ## Read the engineering story
 
 <details open>

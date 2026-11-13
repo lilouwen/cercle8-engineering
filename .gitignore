@@ -35,3 +35,7 @@ logs/
 backups/
 dumps/
 exports/
+
+# Generated documentation site
+.site-docs/
+site/
