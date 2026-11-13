@@ -48,7 +48,9 @@ def destination(source: Path, target: str) -> Path | None:
     path = unquote(urlsplit(target).path)
     if not path:
         return None
-    return ((ROOT / path.lstrip("/")) if path.startswith("/") else (source.parent / path)).resolve()
+    # The site landing is staged at the published site root, not in site-content.
+    parent = ROOT if source.relative_to(ROOT).as_posix() == "site-content/index.md" else source.parent
+    return ((ROOT / path.lstrip("/")) if path.startswith("/") else (parent / path)).resolve()
 
 
 def main() -> int:
